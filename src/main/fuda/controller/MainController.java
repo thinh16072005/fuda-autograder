@@ -1,5 +1,7 @@
 package fuda.controller;
 
+import fuda.modules.execution.ExecutionResult;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.util.*;
@@ -20,7 +22,6 @@ public class MainController {
     private String currentMSSV = "";
     private int totalFiles = 0;
     private int processedCount = 0;
-
     /**
      * Nạp danh sách bài làm từ thư mục mẹ.
      *
@@ -85,6 +86,8 @@ public class MainController {
                 String url = "http://localhost:" + port;
                 System.out.println("🚀 Đang chạy tại: " + url);
                 openLink(url);
+                Thread.sleep(2000); // chờ server ổn định
+                ExecutionResult result = ExecutionController.execute(url);
             } else {
                 System.err.println("❌ Không thể khởi động Dev Server.");
             }
