@@ -1,8 +1,8 @@
-package fuda.modules.analysis.config;
+package fuda.modules.analysis.models;
 
 import java.util.List;
 
-public record CriteriaConfig(
+public record CriteriaReport(
     String id,
     RuleType type,
     int weight,

@@ -1,4 +1,4 @@
-package fuda.modules.analysis.config;
+package fuda.modules.analysis.models;
 
 public enum RuleType {
     FILE_EXISTS,

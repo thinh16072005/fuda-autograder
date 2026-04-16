@@ -1,10 +1,10 @@
-package fuda.modules.analysis.config;
+package fuda.modules.analysis.models;
 
 import java.util.List;
 
-public record RubricConfig(
+public record RubricReport(
     String assignmentId,
     List<String> sourceRoots,
     List<String> ignoreDirs,
-    List<CriteriaConfig> criteria
+    List<CriteriaReport> criteria
 ) {}
